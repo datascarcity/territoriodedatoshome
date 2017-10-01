@@ -161,7 +161,7 @@ body {
     width: 700px;
   }
 }
-video {
+video#bgvid {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -170,16 +170,18 @@ video {
     width: auto;
     height: auto;
     z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
- background: url('img/oliegosvideo.png') no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
-}
-
-@media screen and (max-width: 500px) {
-  div{width:70%;}
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
 }
 @media screen and (max-device-width: 800px) {
-  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }
-  #bgvid { display: none; }
+    html {
+         background: url(polina.jpg) #000 no-repeat center center fixed;
+    }
+    #bgvid {
+        display: none;
+    }
 }
